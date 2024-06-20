@@ -6,7 +6,7 @@ Os desafios estão organizados em branches, sendo uma branch para cada desafio.
 
 | # | Desafio | Branch |
 |---|---------|--------|
-| 1 | Simulando uma conta bancária através do terminal/console | [ContaBanco](https://github.com/alexandre-melgarejo/dio-java-basico/tree/ContaBanco) |
+| 3 | POO - Implementação Java Iphone 2007 | [UML IPhone 2007](https://github.com/alexandre-melgarejo/dio-java-basico/tree/poo) |
 
 
 #### Sobre a branch "aulas"
