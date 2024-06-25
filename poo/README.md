@@ -9,7 +9,7 @@ Projeto para atender ao desafio "POO - Lançamento do Iphone 2007".
 O desafio é composto por 2 atividades:
 
 - **UML do iPhone**: contida abaixo, neste documento.
-- **Implementação Java** do UML: armazenada na pasta "/src".
+- **Implementação Java** do UML: armazenada na pasta "/src/fabrica".
 
 ---
 ## UML do iPhone
