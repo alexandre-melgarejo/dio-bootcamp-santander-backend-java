@@ -1,18 +1,25 @@
-## Getting Started
+# Bootcamp DIO Santander 2024 - Backend Java
+## Trilha Java Básico
+### Repositorio para armazenar todo o conteudo do curso de java basico
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Os desafios estão organizados em branches, sendo uma branch para cada desafio.
 
-## Folder Structure
+| # | Desafio | Branch |
+|---|---------|--------|
+| 5 | Abstraindo um Bootcamp usando OO em Java | [desafio-poo-dio](https://github.com/alexandre-melgarejo/dio-java-basico/tree/desafio-poo-dio) |
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+#### Sobre a branch "aulas"
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Além das branches dos desafios (listadas na tabela acima), existe a [branch aulas](https://github.com/alexandre-melgarejo/dio-java-basico/tree/aulas) que armazena materiais de estudo, tais como rascunho, experiências, códigos desenvolvidos durante as aulas, explorações de novos recursos, etc.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Nenhum desafio está contido nessa branch.
 
-## Dependency Management
+A lista completa dos desafios encontra-se na tabela acima.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+
+Se você tiver alguma contribuição, sugestão, reclamação, etc [registre uma issue](https://github.com/alexandre-melgarejo/dio-java-basico/issues).
+
+---
+Feito com 💙, ☕, 📚 e 🤖 · direto de MS - Brasil.
