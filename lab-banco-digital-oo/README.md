@@ -6,7 +6,7 @@ Os desafios estão organizados em branches, sendo uma branch para cada desafio.
 
 | # | Desafio | Branch |
 |---|---------|--------|
-| 4 | Criando um Banco Digital com Java e Orientação a Objetos | [lab-banco-digital-oo](https://github.com/alexandre-melgarejo/dio-java-basico/tree/lab-banco-digital-oo) |
+| 4 | Simulando uma conta bancária através do terminal/console | [lab-banco-digital-oo](https://github.com/alexandre-melgarejo/dio-java-basico/tree/lab-banco-digital-oo) |
 
 
 #### Sobre a branch "aulas"
