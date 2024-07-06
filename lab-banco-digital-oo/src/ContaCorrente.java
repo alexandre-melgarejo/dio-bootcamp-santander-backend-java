@@ -6,9 +6,9 @@ public class ContaCorrente extends Conta {
 	}
 
 	@Override
-	public void imprimirExtrato() {
-		System.out.println("=== Extrato Conta Corrente ===");
-		super.imprimirInfosComuns();
+	public void imprimirSaldo() {
+		System.out.println("=== Dados Conta Corrente ===");
+		super.imprimirDadosConta();
 	}
 	
 }
