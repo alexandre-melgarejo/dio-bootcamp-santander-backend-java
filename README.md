@@ -6,7 +6,7 @@ Os desafios estão organizados em branches, sendo uma branch para cada desafio.
 
 | # | Desafio | Branch |
 |---|---------|--------|
-| 6 | Design patterns com java | [lab-padroes-projeto-spring](https://github.com/alexandre-melgarejo/dio-java-basico/tree/lab-padroes-projeto-spring) |
+| 7 | Publicar API na nuvem | [publicar-api-nuvem](https://github.com/alexandre-melgarejo/dio-java-basico/tree/publicar-api-nuvem) |
 
 
 #### Sobre a branch "aulas"
