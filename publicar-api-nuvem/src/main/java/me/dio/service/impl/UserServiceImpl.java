@@ -1,15 +1,14 @@
 package me.dio.service.impl;
 
-import me.dio.domain.model.Account;
-import me.dio.domain.model.Card;
+import me.dio.domain.dto.UserDTO;
 import me.dio.domain.model.User;
-import me.dio.domain.repository.AccountRepository;
-import me.dio.domain.repository.CardRepository;
 import me.dio.domain.repository.UserRepository;
 import me.dio.service.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 
 @Service

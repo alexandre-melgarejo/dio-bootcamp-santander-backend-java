@@ -12,8 +12,6 @@ public class AccountDTO {
     private BigDecimal balance;
     private BigDecimal limit;
 
-    // Construtores, getters e setters
-
     public AccountDTO(Account account) {
         // this.id = account.getId();
         this.number = account.getNumber();

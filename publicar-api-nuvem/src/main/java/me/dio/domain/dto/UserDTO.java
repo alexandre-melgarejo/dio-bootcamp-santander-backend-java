@@ -1,14 +1,10 @@
 package me.dio.domain.dto;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import org.springframework.web.util.UriComponentsBuilder;
-
-import jakarta.servlet.http.HttpServletRequest;
 import me.dio.domain.model.User;
 
 public class UserDTO {
@@ -81,6 +77,12 @@ public class UserDTO {
         } else {
             this.location = null;
         }
+    }
+
+    public static Iterable<UserDTO> UserDTOList(Iterable<User> users) {
+        List<UserDTO> userDTOs = new ArrayList<>();
+        users.forEach(user -> userDTOs.add(new UserDTO(user)));
+        return userDTOs;
     }
 
 }

@@ -20,8 +20,8 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<Iterable<User>> findAll() {
-        return ResponseEntity.ok(userService.findAll());
+    public ResponseEntity<Iterable<UserDTO>> findAll() {
+        return ResponseEntity.ok(UserDTO.UserDTOList(userService.findAll()));
     }
 
     @GetMapping("/{id}")
@@ -43,14 +43,6 @@ public class UserController {
 
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User userToUpdate) {
-        userToUpdate.setId(id);
-        User user = userService.update(userToUpdate);
-        return ResponseEntity.ok(user);
-        // return ResponseEntity.noContent().build();
-    }
-
-
+    //TODO Descobrir como implementar metodo PUT para alterar o user
 
 }
