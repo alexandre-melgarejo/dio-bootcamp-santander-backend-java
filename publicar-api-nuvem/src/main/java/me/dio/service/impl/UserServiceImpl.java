@@ -16,13 +16,9 @@ import java.util.NoSuchElementException;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
-    private final AccountRepository accountRepository;
-    private final CardRepository cardRepository;
 
-    public UserServiceImpl(UserRepository userRepository, AccountRepository accountRepository, CardRepository cardRepository) {
+    public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
-        this.accountRepository = accountRepository;
-        this.cardRepository = cardRepository;
     }
 
     @Override
@@ -50,29 +46,6 @@ public class UserServiceImpl implements UserService {
     public void delete(Long id) {
         User userToDelete = userRepository.findById(id).orElseThrow(NoSuchElementException::new);
         userRepository.delete(userToDelete);
-    }
-
-    @Override
-    public User update(User userToUpdate) {
-
-        if (!userRepository.existsById(userToUpdate.getId())) {
-            throw new NoSuchElementException();
-        }
-
-        Account account = accountRepository.findByNumber(userToUpdate.getAccount().getNumber());
-        Card card = cardRepository.findByNumber(userToUpdate.getCard().getNumber());
-
-        if (account != null) {
-            userToUpdate.getAccount().setId(account.getId());
-        }
-
-        if (card != null) {
-            userToUpdate.getCard().setId(card.getId());
-        }
-
-//        userRepository.save(userToUpdate);
-        return userToUpdate;
-
     }
     
 }
