@@ -17,6 +17,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Iterable<User> findAll() {
+        return userRepository.findAll();
+    }
+
+    @Override
     public User findById(Long id) {
         return userRepository.findById(id).orElseThrow(NoSuchElementException::new);
     }
@@ -28,4 +33,18 @@ public class UserServiceImpl implements UserService {
         }
         return userRepository.save(userToCreate);
     }
+
+    @Override
+    public void delete(Long id) {
+        User userToDelete = userRepository.findById(id).orElseThrow(NoSuchElementException::new);
+        userRepository.delete(userToDelete);
+    }
+
+    // @Override
+    // public User update(User userToUpdate) {
+    //     // TODO Auto-generated method stub
+    //     return null;
+    // }
+
+    
 }
