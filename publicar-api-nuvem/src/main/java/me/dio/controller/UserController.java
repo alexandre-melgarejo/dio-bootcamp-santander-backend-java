@@ -1,7 +1,11 @@
 package me.dio.controller;
 
+import me.dio.domain.dto.UserDTO;
 import me.dio.domain.model.User;
 import me.dio.service.UserService;
+
+import org.apache.catalina.connector.Response;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -19,18 +23,14 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findById(@PathVariable Long id) {
-       var user = userService.findById(id);
-       return ResponseEntity.ok(user);
+    public ResponseEntity<UserDTO> findById(@PathVariable Long id) {
+       UserDTO userDTO = new UserDTO(userService.findById(id));
+       return ResponseEntity.ok(userDTO);
     }
 
     @PostMapping
-    public ResponseEntity<User> create(@RequestBody User userToCreate) {
-        var userCreated = userService.create(userToCreate);
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(userCreated.getId())
-                .toUri();
-        return ResponseEntity.created(location).body(userCreated);
+    public ResponseEntity<UserDTO> create(@RequestBody User userToCreate) {
+        User userCreated = userService.create(userToCreate);
+        return ResponseEntity.status(HttpStatus.CREATED).body(new UserDTO(userCreated));
     }
 }
